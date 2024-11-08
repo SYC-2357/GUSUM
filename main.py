@@ -16,8 +16,11 @@ nltk.download('averaged_perceptron_tagger')
 from nltk.corpus import stopwords
   
 from datasets import load_dataset
+import os
 
-dataset = load_dataset('cnn_dailymail', '3.0.0')
+os.environ["HF_HOME"] = "D:/huggingface_cache"
+dataset = load_dataset("abisee/cnn_dailymail", '3.0.0')
+
 
 #https://pypi.org/project/py-rouge/
 import re 
